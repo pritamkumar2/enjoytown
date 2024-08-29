@@ -24,7 +24,9 @@ export function MainNav() {
     <div className="mr-4 hidden xl:flex">
       <Link href="/" className="mr-6 flex items-center space-x-2">
         <Clapperboard className="h-6 w-6" />
+        <h2 className="text-lg font-semibold">movie-watch</h2>
       </Link>
+
       <nav className="flex items-center gap-4 text-sm lg:gap-6">
         <NavigationMenu>
           <NavigationMenuList>
@@ -32,22 +34,22 @@ export function MainNav() {
               <Link href="/" legacyBehavior passHref>
                 <NavigationMenuLink className={navigationMenuTriggerStyle()}>
                   <Home className="h-4 w-4" />
-                  <div className="px-2"> Home </div>
+                  <span className="px-2">Home</span>
                 </NavigationMenuLink>
               </Link>
             </NavigationMenuItem>
             <NavigationMenuItem>
               <NavigationMenuTrigger>
                 <Tv className="h-4 w-4" />
-                <div className="px-2"> Watch </div>
+                <span className="px-2">Watch</span>
               </NavigationMenuTrigger>
               <NavigationMenuContent>
                 <ul className="grid gap-3 p-4 md:w-[400px] lg:w-[400px]">
                   <ListItem href="/movie" title="Movie">
                     Explore Movie Marvels: Spectacles Await You!
                   </ListItem>
-                  <ListItem href="/tv" title="Tv Shows">
-                    Live on TV Shows: Addiction await ≥
+                  <ListItem href="/tv" title="TV Shows">
+                    Live on TV Shows: Addiction Awaits ≥
                   </ListItem>
                   <ListItem href="/drama" title="Drama">
                     Indulge in Drama: Emotions Await!
@@ -62,7 +64,7 @@ export function MainNav() {
               <Link href="/manga" legacyBehavior passHref>
                 <NavigationMenuLink className={navigationMenuTriggerStyle()}>
                   <Book className="h-4 w-4" />
-                  <div className="px-2"> Manga </div>
+                  <span className="px-2">Manga</span>
                 </NavigationMenuLink>
               </Link>
             </NavigationMenuItem>
@@ -70,7 +72,7 @@ export function MainNav() {
               <Link href="/list" legacyBehavior passHref>
                 <NavigationMenuLink className={navigationMenuTriggerStyle()}>
                   <List className="h-4 w-4" />
-                  <div className="px-2"> List </div>
+                  <span className="px-2">List</span>
                 </NavigationMenuLink>
               </Link>
             </NavigationMenuItem>

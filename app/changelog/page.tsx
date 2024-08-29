@@ -42,7 +42,7 @@ const changelogEntries: ChangelogEntry[] = [
     version: "1.0.0",
     date: "2024-05-10",
     changes: [
-      "Initial release of Enjoytown",
+      "Initial release of movie-watch",
       "Implemented basic streaming functionality",
       "Added support for movies, TV series, and anime",
     ],
@@ -62,7 +62,7 @@ export default function Changelog() {
             <h1 className="text-4xl font-bold">Changelog</h1>
             <p className="text-sm leading-6 text-muted-foreground">
               Stay up to date with the latest changes and improvements in
-              Enjoytown.
+              movie-watch.
             </p>
           </div>
         </section>

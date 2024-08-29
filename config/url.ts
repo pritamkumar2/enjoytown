@@ -10,15 +10,15 @@ export const url = {
   genre: "https://animetize-api.vercel.app/genre",
 };
 
-export const API_KEY = "171fe27dbfecc58e2a18fbced644cda9";
+export const API_KEY = "e39d4404bc82afa196d49c77c4e4fcfa";
 export const PROXY = "https://sup-proxy.zephex0-f6c.workers.dev/api-json?url=";
 export const Tv_OntheAir = `${PROXY}https://api.themoviedb.org/3/tv/on_the_air?api_key=${API_KEY}`;
 export const Tv_NowPlaying = `${PROXY}https://api.themoviedb.org/3/tv/now_playing?api_key=${API_KEY}`;
 export const Tv_TopRated = `${PROXY}https://api.themoviedb.org/3/tv/top_rated?api_key=${API_KEY}`;
 export const Tv_AiringToday = `${PROXY}https://api.themoviedb.org/3/tv/airing_today?api_key=${API_KEY}`;
 export const Tv_Popular = `${PROXY}https://api.themoviedb.org/3/tv/popular?api_key=${API_KEY}`;
-export const Movie_Search = `https://api.themoviedb.org/3/search/movie?api_key=${API_KEY}&query=`;
-export const Tv_Search = `https://api.themoviedb.org/3/search/tv?api_key=${API_KEY}&query=`;
+export const Movie_Search = `${PROXY}https://api.themoviedb.org/3/search/movie?api_key=${API_KEY}&query=`;
+export const Tv_Search = `${PROXY}https://api.themoviedb.org/3/search/tv?api_key=${API_KEY}&query=`;
 export const getInfoURL = (movieId: any) =>
   `${PROXY}https://api.themoviedb.org/3/movie/${movieId}?api_key=${API_KEY}`;
 export const getTVInfoURL = (TVId: any) =>

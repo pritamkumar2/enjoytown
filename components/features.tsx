@@ -55,9 +55,9 @@ export const HomeFeatures = () => {
     <section className="py-8" id="features">
       <div className="mx-auto max-w-6xl space-y-8">
         <div className="flex flex-col items-center space-y-2">
-          <h2 className="text-2xl font-bold">Enjoytown Features</h2>
+          <h2 className="text-2xl font-bold">watch-movie Features</h2>
           <p className="w-2/3 text-center text-muted-foreground">
-            Enjoytown is for cinema fans who like to explore millions of movies
+            watch-movie is for cinema fans who like to explore millions of movies
             and series, with information such as synopsis, cast, budget, and
             much more.
           </p>

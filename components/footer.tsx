@@ -36,7 +36,7 @@ export const Footer = () => {
             <div className="flex items-center gap-4">
               <div className="flex items-center gap-2">
                 <Icons.clapperboard className="h-6 w-6" />
-                <h2 className="text-2xl font-bold">Enjoytown</h2>
+                <h2 className="text-2xl font-bold">movie-watch</h2>
               </div>
 
               <div>
@@ -47,7 +47,7 @@ export const Footer = () => {
               </div>
             </div>
 
-            <p className="text-sm text-muted-foreground">Created with {`<3`} by Kushi</p>
+     
           </div>
 
           <div>

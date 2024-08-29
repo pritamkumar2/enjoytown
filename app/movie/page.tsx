@@ -4,8 +4,19 @@ import Popular from "@/components/sections/movie/popular";
 import NowPlaying from "@/components/sections/movie/nowplaying";
 import Upcoming from "@/components/sections/movie/upcoming";
 import TopRated from "@/components/sections/movie/toprated";
-
+import { Metadata } from "next";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+export const metadata: Metadata = {
+  title: "Movies",
+  description: "Watch the latest, trending, and blockbuster movies online.",
+  openGraph: {
+    title: "Movies",
+    description: "Watch the latest, trending, and blockbuster movies online.",
+  
+  },
+};
+
+
 const Carousal = dynamic(() => import("@/components/carousal/movie"), {
   ssr: false,
   loading: () => (

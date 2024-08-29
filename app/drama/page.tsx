@@ -1,3 +1,5 @@
+
+
 "use client";
 import { PlaceholdersAndVanishInput } from "@/components/ui/placeholders-and-vanish-input";
 import { Card, CardContent, } from "@/components/ui/card";
@@ -5,6 +7,11 @@ import { useState, useEffect, useCallback } from "react";
 import { FetchSearchTitle, FetchAnimeInfo } from "@/fetch";
 import Image from "next/image";
 import Link from "next/link";
+
+
+
+
+
 
 export default function DramaSearch() {
   const placeholders = [

@@ -13,6 +13,7 @@ import { GetSearchedAnime, PreFetchMangaInfo } from "@/fetch";
 import Image from "next/image";
 import Link from "next/link";
 
+
 export default function Hero() {
   const placeholders = [
     "Naruto (2002-2007)",

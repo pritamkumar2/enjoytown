@@ -4,8 +4,25 @@ import Popular from "@/components/sections/tv/popular";
 import AiringToday from "@/components/sections/tv/airingtoday";
 import OnTheAir from "@/components/sections/tv/ontheair";
 import TopRated from "@/components/sections/tv/toprated";
-
+import { Metadata } from "next";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+export const metadata: Metadata = {
+  title: "TV Shows",
+  description: "Stream the latest and most popular TV shows online.",
+  openGraph: {
+    title: "TV Shows",
+    description: "Stream the latest and most popular TV shows online.",
+    images: [
+      {
+        url: "/path-to-your-tv-show-image.jpg",
+        width: 800,
+        height: 600,
+        alt: "TV Shows",
+      },
+    ],
+  },
+};
+
 const Carousal = dynamic(() => import("@/components/carousal/tv"), {
   ssr: false,
   loading: () => (

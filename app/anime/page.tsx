@@ -1,10 +1,29 @@
+
+
 import dynamic from "next/dynamic";
 import { Skeleton } from "@/components/ui/skeleton";
 import Popular from "@/components/sections/anime/popular";
 import Trending from "@/components/sections/anime/trending";
 import AiringSchedule from "@/components/sections/anime/airing";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import { Metadata } from "next";
 
+export const metadata: Metadata = {
+  title: "Anime",
+  description: "Discover the latest trending, popular, and upcoming anime.",
+  openGraph: {
+    title: "Anime",
+    description: "Discover the latest trending, popular, and upcoming anime.",
+    images: [
+      {
+        url: "/path-to-your-image.jpg",
+        width: 800,
+        height: 600,
+        alt: "Anime",
+      },
+    ],
+  },
+};
 const Carousal = dynamic(() => import("@/components/carousal/anime"), {
   ssr: false,
   loading: () => (
