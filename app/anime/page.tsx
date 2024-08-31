@@ -14,14 +14,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Anime",
     description: "Discover the latest trending, popular, and upcoming anime.",
-    images: [
-      {
-        url: "/path-to-your-image.jpg",
-        width: 800,
-        height: 600,
-        alt: "Anime",
-      },
-    ],
+   
   },
 };
 const Carousal = dynamic(() => import("@/components/carousal/anime"), {
