@@ -63,6 +63,8 @@ export default function VideoPlayer({ id }: any) {
       </div>
       <div className="flex flex-row items-center justify-center w-full">
         <div className="flex flex-col text-center">
+        <div className="flex flex-col text-center mb-4">
+        <h4 className="text-red-500">change servers here 👇</h4></div>
           <Select onValueChange={handleSelectChange} value={selectedSource}>
             <SelectTrigger className="px-4 py-2 rounded-md w-[280px]">
               <SelectValue placeholder="Select Video Source" />

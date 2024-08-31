@@ -12,6 +12,16 @@ import {
 } from "@/components/ui/tooltip";
 import { Badge } from "@/components/ui/badge";
 import { cn } from "@/lib/utils";
+import { Metadata } from "next";
+
+export const generateMetadata = ({ title }: { title: string }): Metadata => ({
+  title: `Movie Details - ${title}`,
+  description: `Explore detailed information about ${title}, including release date, genres, ratings, and more. Watch the trailer and discover similar movies.`,
+  openGraph: {
+    title: `Movie Details - ${title}`,
+    description: `Dive into the details of ${title}. Get insights on the release date, genres, ratings, and more. Stream or download now.`,
+  },
+});
 
 const DetailsContainer = ({ data, id, embed }: any) => {
   return (

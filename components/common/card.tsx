@@ -19,6 +19,7 @@ export default function CarousalCard(props: CarousalCardProps) {
     <>
       {props.show && (
         <>
+
           <div className="flex md:hidden   h-[70vh]   relative">
             <img
               alt=""

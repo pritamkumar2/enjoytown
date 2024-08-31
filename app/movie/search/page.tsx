@@ -23,6 +23,7 @@ export default function Search() {
   const [result, setResults] = useState<Result | null>(null);
 
   const fetch_results = async (title: string) => {
+ 
     if (title) {
       const data = await get_search_results(title);
       FetchMovieInfo(data);

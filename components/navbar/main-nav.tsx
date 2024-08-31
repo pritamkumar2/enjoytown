@@ -76,6 +76,23 @@ export function MainNav() {
                 </NavigationMenuLink>
               </Link>
             </NavigationMenuItem>
+
+            <NavigationMenuItem>
+              <Link href="/about" legacyBehavior passHref>
+                <NavigationMenuLink className={navigationMenuTriggerStyle()}>
+                  <Home className="h-4 w-4" />
+                  <span className="px-2">About</span>
+                </NavigationMenuLink>
+              </Link>
+            </NavigationMenuItem>
+            <NavigationMenuItem>
+              <Link href="/PrivacyPolicy" legacyBehavior passHref>
+                <NavigationMenuLink className={navigationMenuTriggerStyle()}>
+                  <Home className="h-4 w-4" />
+                  <span className="px-2">Policy</span>
+                </NavigationMenuLink>
+              </Link>
+            </NavigationMenuItem>
           </NavigationMenuList>
         </NavigationMenu>
       </nav>
