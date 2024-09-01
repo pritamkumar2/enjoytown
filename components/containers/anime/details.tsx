@@ -23,8 +23,6 @@ import { Separator } from "@/components/ui/separator";
 import { Badge } from "@/components/ui/badge";
 
 const DetailsContainer = ({ data }: any) => {
-
-  console.log(" --------------------------------------------",data)
   if (!data) {
     return <div>No Data!</div>;
   }

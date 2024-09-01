@@ -30,7 +30,7 @@ export default function Trending() {
     const fetchData = async () => {
       setLoading(true);
       const res = await fetch(
-        "https://consumet-jade.vercel.app/meta/anilist/trending",
+        "https://consumet-api-jkyo.onrender.com/meta/anilist/trending",
         { next: { revalidate: 21600 } }
       );
       const data = await res.json();

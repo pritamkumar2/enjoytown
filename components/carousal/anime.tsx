@@ -28,7 +28,7 @@ export default async function CarousalComponent() {
 
 const get_popular = async () => {
   const res = await fetch(
-    "https://consumet-jade.vercel.app/meta/anilist/popular",
+    "https://consumet-api-jkyo.onrender.com/meta/anilist/popular",
     { next: { revalidate: 21600 } }
   );
   const data = await res.json();

@@ -152,6 +152,22 @@ async function getMarvelMovies() {
   return data.results;
 }
 
+async function getHollywoodMovies() {
+  const res = await fetch(
+    `https://api.themoviedb.org/3/discover/movie?api_key=e39d4404bc82afa196d49c77c4e4fcfa&region=US&sort_by=popularity.desc&with_original_language=en`
+  );
+  const data = await res.json();
+  return data.results;
+}
+
+async function allHollywoodMovies() {
+  const res = await fetch(
+    `https://api.themoviedb.org/3/discover/movie?api_key=e39d4404bc82afa196d49c77c4e4fcfa&region=US&with_original_language=en&with_genres=16&sort_by=popularity.desc
+`
+  );
+  const data = await res.json();
+  return data.results;
+}
 
 export default async function Home() {
   const id = "801688";
@@ -160,6 +176,8 @@ export default async function Home() {
   const marvelMovies = await getMarvelMovies();
   const southMovies = await getSouthMovies();
   const latestMovies = await getlatestMovies();
+  const hollywoodMovies = await getHollywoodMovies();
+  const allhollywoodMovies = await allHollywoodMovies();
 
   // Split the latest movies into three groups of 9 movies each
   const latestMoviesGroup1 = latestMovies.slice(0, 9);
@@ -179,11 +197,25 @@ export default async function Home() {
    const marvelMoviesGroup2 = marvelMovies.slice(9, 18);
    const marvelMoviesGroup3 = marvelMovies.slice(18, 27);
 
-   trendingMovies
+  //  trendingMovies
 
    const trendingMoviesGroup1 = trendingMovies.slice(0, 9);
    const trendingMoviesGroup2 = trendingMovies.slice(9, 18);
    const trendingMoviesGroup3 = trendingMovies.slice(18, 27);
+
+  //  hollywood movie
+
+  const hollywoodMoviesGroup1 = hollywoodMovies.slice(0, 9);
+   const hollywoodMoviesGroup2 = hollywoodMovies.slice(9, 18);
+   const hollywoodMoviesGroup3 = hollywoodMovies.slice(18, 27);
+
+    //  hollywood movie
+
+  const allhollywoodMoviesGroup1 = allhollywoodMovies.slice(0, 9);
+  const allhollywoodMoviesGroup2 = allhollywoodMovies.slice(9, 18);
+  const allhollywoodMoviesGroup3 = allhollywoodMovies.slice(18, 27);
+
+
 
   return (
     <>
@@ -312,10 +344,47 @@ export default async function Home() {
 
 
  
+         {/* Latest hollywood Movies Section */}
+         <section className="pb-12 py-8">
+        <div className="flex justify-center mt-8 mb-16 text-4xl">
+          <h3>Latest hollywood Movies</h3>
+        </div>
+
+        {/* Movie Scrollers */}
+        <MovieScroller movies={hollywoodMoviesGroup1} />
+        <MovieScroller movies={hollywoodMoviesGroup2} />
+        <MovieScroller movies={hollywoodMoviesGroup3} />
+
+        <div className="flex justify-center mt-8">
+          <Link href={`/movie`}>
+            <Button variant="outline">More</Button>
+          </Link>
+        </div>
+      </section>
+
+
+
+     {/* all hollywood Movies Section */}
+     <section className="pb-12 py-8">
+        <div className="flex justify-center mt-8 mb-16 text-4xl">
+          <h3>animate Movies</h3>
+        </div>
+
+        {/* Movie Scrollers */}
+        <MovieScroller movies={allhollywoodMoviesGroup1} />
+        <MovieScroller movies={allhollywoodMoviesGroup2} />
+        <MovieScroller movies={allhollywoodMoviesGroup3} />
+
+        <div className="flex justify-center mt-8">
+          <Link href={`/movie`}>
+            <Button variant="outline">More</Button>
+          </Link>
+        </div>
+      </section>
 
       {/* {trending anime section} */}
 
-      <section>
+      {/* <section>
         <div className="flex justify-center mt-8 mb-16 text-4xl">
           <h3>Latest Trending Anime</h3>
         </div>
@@ -326,7 +395,7 @@ export default async function Home() {
             <Button variant="outline">More</Button>
           </Link>
         </div>
-      </section>
+      </section> */}
       <HomeFeatures />
       <section className="space-y-8">
         <Craft.Section>
