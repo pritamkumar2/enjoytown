@@ -257,22 +257,27 @@ export default async function Home() {
       </section>
 
       {/* Trending Movies Section */}
-   
-        <section className="pb-12 py-8">
-  <div className="flex justify-center mt-8 mb-16 text-4xl">
-    <h3>Latest Trending Movies</h3>
+      <section className="pb-12 py-8">
+  <div className="flex flex-col items-center mb-16">
+    <h3 className="text-3xl md:text-4xl font-bold mb-4">Latest Trending Movies</h3>
   </div>
- {/* Movie Scrollers */}
- <MovieScroller movies={trendingMoviesGroup1} />
-        <MovieScroller movies={trendingMoviesGroup2} />
-        <MovieScroller movies={trendingMoviesGroup3} />
+  
+  {/* Movie Scrollers */}
+  <div className="space-y-8">
+    <MovieScroller movies={trendingMoviesGroup1} />
+    <MovieScroller movies={trendingMoviesGroup2} />
+    <MovieScroller movies={trendingMoviesGroup3} />
+  </div>
 
   <div className="flex justify-center mt-8">
     <Link href={`/movie`}>
-      <Button variant="outline">More</Button>
+      <Button variant="outline" className="px-6 py-3 text-base md:text-lg">
+        More
+      </Button>
     </Link>
   </div>
 </section>
+
 
       
 
@@ -288,7 +293,7 @@ export default async function Home() {
       <section className="pb-12 py-8">
      
         <div className="flex justify-center mt-8 mb-16 text-4xl">
-          <h3>Trending South Indian Movies</h3>
+          <h3 className="text-3xl md:text-4xl font-bold mb-4">Trending South Indian Movies</h3>
         </div>
 
         {/* Movie Scrollers */}
@@ -308,7 +313,7 @@ export default async function Home() {
  {/* Marvel Movies Section */}
  <section className="pb-12 py-8">
         <div className="flex justify-center mt-8 mb-16 text-4xl">
-          <h3>Marvel Movies</h3>
+          <h3 className="text-3xl md:text-4xl font-bold mb-4">Marvel Movies</h3>
         </div>
 
         {/* Movie Scrollers */}
@@ -347,7 +352,7 @@ export default async function Home() {
          {/* Latest hollywood Movies Section */}
          <section className="pb-12 py-8">
         <div className="flex justify-center mt-8 mb-16 text-4xl">
-          <h3>Latest hollywood Movies</h3>
+          <h3 className="text-3xl md:text-4xl font-bold mb-4">Latest hollywood Movies</h3>
         </div>
 
         {/* Movie Scrollers */}
@@ -367,7 +372,7 @@ export default async function Home() {
      {/* all hollywood Movies Section */}
      <section className="pb-12 py-8">
         <div className="flex justify-center mt-8 mb-16 text-4xl">
-          <h3>animate Movies</h3>
+          <h3 className="text-3xl md:text-4xl font-bold mb-4">animate Movies</h3>
         </div>
 
         {/* Movie Scrollers */}
