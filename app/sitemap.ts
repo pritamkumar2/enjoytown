@@ -372,23 +372,25 @@ const sitemap = async (): Promise<MetadataRoute.Sitemap> => {
     ...allHollywood
   ];
 
-  const movieUrls = allMovies.map((movie: { id: number, title: string }) => {
+  const movieUrls = allMovies.map((movie: { id: number, title: string ,poster_path:any}) => {
     const tag = getRandomTag();
     const titleTag =getTitleTag();
     const movieUrl = `${BASE_URL}/movie/${movie.id}`;
 
- return {
-  url: movieUrl, // The URL of the movie page
-  changefreq: 'weekly', // How frequently the page is updated
-  priority: 0.9, // The priority of this page compared to others
-  lastmod: new Date().toISOString(), // The last modification date of the page
-  title: `${movie.title} ${titleTag} - ${tag}`, // Title for SEO
-  description: generateDescription(movie.title, tag), // Meta description for SEO
-  keywords: generateKeywords(movie.title, tag), // Keywords for SEO
-  imageAlt: `${movie.title} Poster`, // Alt text for the movie poster image
-  structuredData: generateStructuredData(movie.title, tag, movieUrl), // Structured data for SEO
-  canonical: movieUrl // Canonical URL to avoid duplicate content issues
-};
+    return {
+      url: movieUrl, // The URL of the movie page
+      changefreq: 'weekly', // How frequently the page is updated
+      priority: 0.9, // The priority of this page compared to others
+      lastmod: new Date().toISOString(), // The last modification date of the page
+      title: `${movie.title} ${titleTag} - ${tag}`, // Title for SEO
+      description: generateDescription(movie.title, tag), // Meta description for SEO
+      keywords: generateKeywords(movie.title, tag), // Keywords for SEO
+      imageUrl: movie.poster_path, // The URL of the movie poster image
+      imageAlt: `${movie.title} Poster`, // Alt text for the movie poster image
+      structuredData: generateStructuredData(movie.title, tag, movieUrl), // Structured data for SEO
+      canonical: movieUrl // Canonical URL to avoid duplicate content issues
+    };
+    
 
   });
 
