@@ -201,6 +201,120 @@ const getRandomTag = () => {
     'Films on Indian Festivals', 'Indian Mythological Movies', 'Ancient Indian Tales'
   ];
 
+
+
+
+  const randomIndex = Math.floor(Math.random() * tags.length);
+  const selectedTag = tags[randomIndex];
+  console.log("Selected Tag:", selectedTag); // Log the randomly selected tag
+  return selectedTag;
+};
+
+
+
+const getTitleTag = () => {
+  const tags = [
+    "Stream Latest Movies Free Online",
+    "Download Movies HD Quality Free",
+    "Watch Movies Online No Subscription",
+    "Best Sites for Free Movie Downloads",
+    "Stream Movies Online High Quality",
+    "Download Full Movies No Cost",
+    "Watch Movies Online Without Fees",
+    "Stream Free Movies No Registration",
+    "Top Platforms for Movie Streaming Free",
+    "Watch Movies Free No Signup Required",
+    "Download and Watch Movies HD Free",
+    "Free Sites for Movie Streaming HD",
+    "Stream Movies Anytime No Charge",
+    "Watch Latest HD Movies Online Free",
+    "Download Movies Without Any Cost",
+    "Free Online HD Movie Streaming Sites",
+    "Watch Movies Free No Ads",
+    "Stream Movies Online with No Signup",
+    "Download and Stream Movies for Free",
+    "Top Free Sites to Watch Movies Online",
+    "Watch Movies HD Online No Fees",
+    "Stream Movies Free High Definition",
+    "Download Free Movies Fast and Easy",
+    "Watch Movies Online Free HD Quality",
+    "Free Movie Streaming Platforms No Cost",
+    "Stream Latest Movies No Registration",
+    "Watch Movies Free Online No Signup",
+    "Download Full Movies Free HD",
+    "Best Free Sites for Movie Watching",
+    "Stream Movies Without Payment Online",
+    "Watch Movies Online High Quality Free",
+    "Download Movies Online No Registration",
+    "Top Free Sites for HD Movie Downloads",
+    "Watch Latest Movies Free No Cost",
+    "Stream Movies Free Without Ads",
+    "Free Sites to Download and Watch Movies",
+    "Download Latest HD Movies Online Free",
+    "Watch Movies Online Free with Subtitles",
+    "Stream Movies Anytime Free No Cost",
+    "Free Streaming Sites for Latest Movies",
+    "Download Movies Fast and HD Quality",
+    "Watch Movies Online Free No Payment",
+    "Stream Movies Online No Cost Required",
+    "Best Free Movie Streaming Sites Online",
+    "Watch Movies HD Online Free No Ads",
+    "Download Movies and TV Shows Free",
+    "Stream Full Movies Online Free No Signup",
+    "Watch Movies Online with High Definition",
+    "Top Sites for Free HD Movie Streaming",
+    "Download and Watch Movies Free Online",
+    "Stream Movies Without Any Cost Free",
+    "Watch Movies Free No Signup No Charge",
+    "Free High Definition Movie Streaming Sites",
+    "Download Movies HD Free No Signup",
+    "Watch Movies Online Free High Quality",
+    "Stream Latest Movies Online No Ads",
+    "Free Movie Sites with No Registration",
+    "Download and Stream Movies HD Quality",
+    "Watch Movies Online Free No Fees",
+    "Stream Movies Online Free Without Buffering",
+    "Top Sites for Watching Free Movies",
+    "Download Free Movies Anytime No Cost",
+    "Watch Movies Online HD Free No Signup",
+    "Free Movie Streaming Sites No Registration",
+    "Stream Movies Online with No Charge",
+    "Download Latest Movies Free Online Now",
+    "Watch Full Movies Online HD Free",
+    "Stream Movies Anytime Online Free",
+    "Best Sites for Free HD Movie Streaming",
+    "Watch Movies Free No Cost Now",
+    "Download and Watch Latest Movies Free",
+    "Stream Movies Free No Fees",
+    "Watch Movies Online Free No Ads Required",
+    "Download Movies Fast and Free Online",
+    "Stream Movies HD Free Online",
+    "Watch Movies Online with No Fees",
+    "Free Sites for Downloading Latest Movies",
+    "Download Movies and TV Shows HD Free",
+    "Stream Movies Free Online with Subtitles",
+    "Watch Movies Online No Signup Required",
+    "Top Free Sites to Download HD Movies",
+    "Download Latest Movies Online Free HD",
+    "Stream Movies Without Any Signup",
+    "Watch Movies Free Online with No Registration",
+    "Download and Stream Movies No Cost",
+    "Watch Movies Online Free No Payment Required",
+    "Best Sites for Free Streaming Movies",
+    "Stream Movies High Quality Free Online",
+    "Download Movies HD Online Free",
+    "Watch Movies Free No Signup No Payment",
+    "Stream Latest Movies Online High Definition",
+    "Download and Watch HD Movies Free",
+    "Free Streaming Sites for Latest Movies",
+    "Watch Movies Online Free No Registration",
+    "Stream Movies Anytime Without Cost",
+    "Top Free Platforms for Movie Streaming"
+  ];
+
+
+
+
   const randomIndex = Math.floor(Math.random() * tags.length);
   const selectedTag = tags[randomIndex];
   console.log("Selected Tag:", selectedTag); // Log the randomly selected tag
@@ -260,20 +374,22 @@ const sitemap = async (): Promise<MetadataRoute.Sitemap> => {
 
   const movieUrls = allMovies.map((movie: { id: number, title: string }) => {
     const tag = getRandomTag();
+    const titleTag =getTitleTag();
     const movieUrl = `${BASE_URL}/movie/${movie.id}`;
 
-    return {
-      url: movieUrl,
-      changefreq: 'weekly',
-      priority: 0.9,
-      lastmod: new Date().toISOString(),
-      title: `${movie.title} - ${tag}`,
-      description: generateDescription(movie.title, tag),
-      keywords: generateKeywords(movie.title, tag),
-      imageAlt: `${movie.title} poster`,
-      structuredData: generateStructuredData(movie.title, tag, movieUrl),
-      canonical: movieUrl
-    };
+ return {
+  url: movieUrl, // The URL of the movie page
+  changefreq: 'weekly', // How frequently the page is updated
+  priority: 0.9, // The priority of this page compared to others
+  lastmod: new Date().toISOString(), // The last modification date of the page
+  title: `${movie.title} ${titleTag} - ${tag}`, // Title for SEO
+  description: generateDescription(movie.title, tag), // Meta description for SEO
+  keywords: generateKeywords(movie.title, tag), // Keywords for SEO
+  imageAlt: `${movie.title} Poster`, // Alt text for the movie poster image
+  structuredData: generateStructuredData(movie.title, tag, movieUrl), // Structured data for SEO
+  canonical: movieUrl // Canonical URL to avoid duplicate content issues
+};
+
   });
 
   // Manually added static pages
