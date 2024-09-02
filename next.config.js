@@ -3,10 +3,15 @@ const nextConfig = {
   images: {
     remotePatterns: [
       {
-        hostname: 'media.kitsu.io',
+        protocol: "https",
+        hostname: "media.kitsu.app",
+        pathname: "/**",
+      },
+      {
+        protocol: "https",
+        hostname: "media.kitsu.io",
         port: '',
         pathname: '/**',
-        protocol: 'https',
       },
       {
         protocol: "https",
