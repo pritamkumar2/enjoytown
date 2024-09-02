@@ -5,11 +5,11 @@ import { Metadata } from "next";
 
 
 export const metadata: Metadata = {
-    title: "About Us - watch-movie.com",
-    description: "Learn more about watch-movie.com, your ultimate destination for movies, anime, TV shows, and more. Discover how we provide an extensive collection of content tailored to your entertainment needs.",
+    title: "About Us - movie-watch",
+    description: "Learn more about  movie-watch.com, your ultimate destination for movies, anime, TV shows, and more. Discover how we provide an extensive collection of content tailored to your entertainment needs.",
     openGraph: {
-      title: "About Us - watch-movie.com",
-      description: "Discover more about watch-movie.com, your source for the latest movies, anime, and TV shows. Learn how we cater to all your entertainment needs.",
+      title: "About Us -  movie-watch",
+      description: "Discover more about  movie-watch.com, your source for the latest movies, anime, and TV shows. Learn how we cater to all your entertainment needs.",
     
     },
   };
