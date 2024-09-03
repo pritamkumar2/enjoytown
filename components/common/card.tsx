@@ -81,14 +81,18 @@ export default function CarousalCard(props: CarousalCardProps) {
                     {show?.overview}
                   </div>
                   <div className="flex my-2  gap-2">
-                    <Link href={`/${props.type}/${show.id}`}>
+                  {
+                    
+                    show.title ? <Link href={`/${props.type}/${show.id}/${show.title }`}/> 
+                    :  <Link href={`/${props.type}/${show.id}`}/>
+                      }
                       <Button
                         variant={"ringHover"}
                         className="whitespace-nowrap w-full"
                       >
                         Go To Show
                       </Button>
-                    </Link>
+      
                   </div>
                 </div>
               </div>

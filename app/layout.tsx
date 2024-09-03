@@ -22,7 +22,7 @@ export const viewport: Viewport = {
 
 export const metadata: Metadata = {
   title: {
-    default: "moviewatch",
+    default: "movie-watch watch & stream movies online",
     template: `%s - ${siteConfig.name}`,
   },
   description: siteConfig.description,

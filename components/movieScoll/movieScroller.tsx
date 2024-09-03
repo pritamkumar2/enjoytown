@@ -15,7 +15,9 @@ const MovieScroller: React.FC<MovieScrollerProps> = ({ movies }) => {
     <div className="w-full overflow-x-scroll overflow-hidden scrollbar-hide snap-x snap-mandatory mt-8">
       <div className="flex space-x-4 snap-center w-max">
         {movies.map((movie) => (
-          <Link href={`/movie/${encodeURIComponent(movie.id)}`} key={movie.id}>
+      <Link   href={`/movie/${movie.id}/${encodeURIComponent(movie.title.toLowerCase().replace(/[^a-z0-9]+/g, '-'))}`}
+      key={movie.id}>
+      {/* ... */}
             <div className="flex-shrink-0 w-[150px] h-[225px] text-center hover:scale-105 transition-all duration-300 relative sm:w-[200px] sm:h-[300px] lg:w-[250px] lg:h-[375px]">
               <div className="relative w-full h-full">
                 <Image

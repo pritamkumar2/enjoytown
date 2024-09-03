@@ -67,7 +67,7 @@ export default function Search() {
               if (item.poster_path) {
                 return (
                   <Link
-                    href={`/movie/${encodeURIComponent(item.id)}`}
+                    href={`/movie/${item.id}/${encodeURIComponent(item.title.toLowerCase().replace(/[^a-z0-9]+/g, '-'))}-full-movie-hindi-stream-online-and-download`}
                     key={index}
                   >
                     <Card className="text-center items-center hover:scale-105 transition-all duration-300">
