@@ -66,7 +66,7 @@ export default function Popular() {
             : data &&
               data.results.slice(0, 18).map((item: any, index: any) => (
                 <Link
-                href={`/movie/${item.id}/${encodeURIComponent(item.title.toLowerCase().replace(/[^a-z0-9]+/g, '-'))}-full-movie-hindi-stream-online-and-download`}
+                href={`/movie/${item.id}/${encodeURIComponent(item.title.toLowerCase().replace(/[^a-z0-9]+/g, '-'))}`}
                 key={index}
                   className="w-full cursor-pointer space-y-2"
                   data-testid="movie-card"

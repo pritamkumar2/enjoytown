@@ -9,7 +9,7 @@ interface CarouselItem {
 export const homeCarouselData: CarouselItem[] = [
   {
     image: "https://i.ibb.co/LkDZhTR/2.png",
-    path: "/movie/Watch?category=Watch",
+    path: "/movie/848116",
     title: "Watch Movie",
   },
   {

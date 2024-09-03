@@ -14,6 +14,6 @@ export default function robots(): MetadataRoute.Robots {
                 ],
             }
         ],
-        sitemap: "https://www.movie-watch.com/",
+        sitemap: "https://www.movie-watch.com",
     };
 }

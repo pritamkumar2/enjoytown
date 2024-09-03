@@ -53,7 +53,7 @@ interface Movie {
         {result && (
           <div className="grid grid-cols-2 gap-4 sm:grid-cols-4 md:grid-cols-6">
             {result.results.map((movie) => (
-              <Link                    href={`/movie/${movie.id}/${encodeURIComponent(movie.title.toLowerCase().replace(/[^a-z0-9]+/g, '-'))}-full-movie-hindi-stream-online-and-download`}
+              <Link                    href={`/movie/${movie.id}/${encodeURIComponent(movie.title.toLowerCase().replace(/[^a-z0-9]+/g, '-'))}`}
  key={movie.id}>
                 <div className="overflow-hidden rounded-md shadow-lg transition-transform transform hover:scale-105">
                   <Image
