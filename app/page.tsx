@@ -259,8 +259,9 @@ export default async function Home() {
       <section className="pb-12 py-8">
         <div className="mx-auto aspect-auto w-full max-w-6xl overflow-hidden rounded-md border bg-background shadow-lg dark:shadow-none md:aspect-">
           <Suspense fallback={<Skeleton className="h-full w-full" />}>
-            <DetailsContainer data={data} id={id} embed />
-          </Suspense>
+ {/* Pass full South Indian movies data */}
+ <DetailsContainer dataList={southMoviesGroup1} id={id} embed={false}/>
+           </Suspense>
         </div>
       </section>
 
@@ -341,23 +342,7 @@ export default async function Home() {
       </section>
 
 
-         {/* Latest Movies Section */}
-         <section className="pb-12 py-8">
-        <div className="flex justify-center mt-8 mb-16 text-4xl">
-          <h3>Latest Indian Movies</h3>
-        </div>
-
-        {/* Movie Scrollers */}
-        <MovieScroller movies={latestMoviesGroup1} />
-        <MovieScroller movies={latestMoviesGroup2} />
-        <MovieScroller movies={latestMoviesGroup3} />
-
-        <div className="flex justify-center mt-8">
-          <Link href={`/movie`}>
-            <Button variant="outline">More</Button>
-          </Link>
-        </div>
-      </section>
+     
 
 
  
@@ -399,6 +384,24 @@ export default async function Home() {
         </div>
       </section>
 
+
+    {/* Latest Movies Section */}
+    <section className="pb-12 py-8">
+        <div className="flex justify-center mt-8 mb-16 text-4xl">
+          <h3>Latest Indian Movies</h3>
+        </div>
+
+        {/* Movie Scrollers */}
+        <MovieScroller movies={latestMoviesGroup1} />
+        <MovieScroller movies={latestMoviesGroup2} />
+        <MovieScroller movies={latestMoviesGroup3} />
+
+        <div className="flex justify-center mt-8">
+          <Link href={`/movie`}>
+            <Button variant="outline">More</Button>
+          </Link>
+        </div>
+      </section>
       {/* {trending anime section} */}
 
       {/* <section>

@@ -9,18 +9,18 @@ interface CarouselItem {
 export const homeCarouselData: CarouselItem[] = [
   {
     image: "https://i.ibb.co/LkDZhTR/2.png",
-    path: "/movie/848116",
+    path: "/movie/848116/rocky and rani",
     title: "Watch Movie",
   },
   {
     image: "https://i.ibb.co/kgyXp2c/1.png",
-    path: "/anime/Watch?category=top",
+    path: "/anime/112151",
     title: "Top Anime",
   },
   {
     image: "https://i.ibb.co/mzT1JHw/3.png",
-    path: "/movie/Watch?category=Watch",
-    title: "Watch Again",
+    path: "/movie/872906/jawan",
+    title: "jawan",
   },
 ];
 
@@ -36,8 +36,8 @@ export const southmovieData: CarouselItem[] = [
     title: "Top Movie",
   },
   {
-    image: "https://imgur.com/zPlwI8q.png",
-    path: "/movie/587412",
+    image: "https://imgur.com/w7qGhD9.png",
+    path: "/watch/1136418",
     title: "Watch Again",
   },
 ];

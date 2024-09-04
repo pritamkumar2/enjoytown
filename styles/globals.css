@@ -59,3 +59,19 @@
       @apply bg-background text-foreground;
     }
   }
+
+
+
+
+  /* Customize the vertical scrollbar */
+::-webkit-scrollbar {
+  width: 1px; /* Thinner scrollbar */
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: yellow; /* Yellow color */
+}
+
+::-webkit-scrollbar-track {
+  background: transparent; /* Transparent track for better visibility */
+}
