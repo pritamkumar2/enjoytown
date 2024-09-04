@@ -5,6 +5,7 @@ import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import { getInfoURL } from "@/config/url";
 import DetailsContainer from "@/components/containers/movie/details";
+import HeroDetailsContainer from "@/components/containers/movie/heroMovieDisplay";
 import { Suspense } from "react";
 import { Skeleton } from "@/components/ui/skeleton";
 import { HomeFeatures } from "@/components/features";
@@ -260,7 +261,7 @@ export default async function Home() {
         <div className="mx-auto aspect-auto w-full max-w-6xl overflow-hidden rounded-md border bg-background shadow-lg dark:shadow-none md:aspect-">
           <Suspense fallback={<Skeleton className="h-full w-full" />}>
  {/* Pass full South Indian movies data */}
- <DetailsContainer dataList={southMoviesGroup1} id={id} embed={false}/>
+ <HeroDetailsContainer dataList={southMoviesGroup1} id={id} embed={false}/>
            </Suspense>
         </div>
       </section>
